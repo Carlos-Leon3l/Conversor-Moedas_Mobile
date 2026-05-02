@@ -5,7 +5,7 @@ import { ConversorContainer } from './screens/Conversor/container';
 export default function App() {
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <ConversorContainer />
     </>
   );

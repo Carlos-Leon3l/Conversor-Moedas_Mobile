@@ -12,7 +12,10 @@ export function useConversorMoedas() {
 
   const converterValor = () => {
     setErro('');
-    if (!valor || isNaN(Number(valor)) || Number(valor) <= 0) {
+    
+    const valorTratado = valor.replace(',', '.');
+    
+    if (!valorTratado || isNaN(Number(valorTratado)) || Number(valorTratado) <= 0) {
       setErro('Digite um valor numérico válido maior que zero.');
       setResultado(null);
       return;
@@ -24,7 +27,7 @@ export function useConversorMoedas() {
       return;
     }
 
-    const valorNumerico = parseFloat(valor.replace(',', '.'));
+    const valorNumerico = parseFloat(valorTratado);
     const valorEmBRL = valorNumerico * TAXAS_CAMBIO[moedaOrigem];
     const valorConvertido = valorEmBRL / TAXAS_CAMBIO[moedaDestino];
     
