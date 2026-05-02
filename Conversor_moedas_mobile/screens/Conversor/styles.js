@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.colors.background,
     padding: theme.spacing.m,
-    paddingTop: theme.spacing.xl * 2, // Espaço para status bar
+    paddingTop: theme.spacing.xl * 2,
   },
   title: {
     fontFamily: theme.typography.fontFamily,
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     minWidth: 300,
     maxWidth: 500,
-    maxHeight: 500, // Limite de altura para o histórico
+    maxHeight: 500,
   },
   card: {
     backgroundColor: 'transparent',

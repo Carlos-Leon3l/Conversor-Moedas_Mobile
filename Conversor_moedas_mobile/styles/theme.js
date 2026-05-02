@@ -1,13 +1,13 @@
 export const theme = {
   colors: {
-    background: '#041d24', // Fundo Antigravity (Ciano Escuro)
-    card: '#0a323c', // Fundo de cartões
-    text: '#FFFFFF', // Texto principal (branco)
-    textSecondary: '#A0AEC0', // Texto secundário
-    primary: '#00E5FF', // Ciano Antigravity (Destaques, botões)
-    primaryActive: '#00B8D4', // Ciano mais escuro para clique
-    border: '#114a56', // Bordas para combinar com o fundo
-    error: '#FF5252', // Vermelho para erros (mais claro para fundo escuro)
+    background: '#041d24',
+    card: '#0a323c',
+    text: '#FFFFFF',
+    textSecondary: '#A0AEC0',
+    primary: '#00E5FF',
+    primaryActive: '#00B8D4',
+    border: '#114a56',
+    error: '#FF5252',
   },
   spacing: {
     xs: 4,

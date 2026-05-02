@@ -24,17 +24,12 @@ export function useConversorMoedas() {
       return;
     }
 
-    // Como as vírgulas podem atrapalhar no parseFloat se o usuário digitar no formato BR, substituímos antes
     const valorNumerico = parseFloat(valor.replace(',', '.'));
-    
-    // A nossa constante baseia o valor multiplicando para BRL
     const valorEmBRL = valorNumerico * TAXAS_CAMBIO[moedaOrigem];
-    // Em seguida, converte do BRL para a moeda de destino dividindo
     const valorConvertido = valorEmBRL / TAXAS_CAMBIO[moedaDestino];
     
     setResultado(valorConvertido);
 
-    // Salvar no histórico
     const novaConversao = {
       id: Date.now().toString(),
       data: formatarData(new Date()),
@@ -44,14 +39,13 @@ export function useConversorMoedas() {
       moedaDestino
     };
 
-    // Mantém as últimas conversões no topo
     setHistorico([novaConversao, ...historico]);
   };
 
   const inverterMoedas = () => {
     setMoedaOrigem(moedaDestino);
     setMoedaDestino(moedaOrigem);
-    setResultado(null); // Obriga o usuário a clicar em converter novamente
+    setResultado(null);
     setErro('');
   };
 
